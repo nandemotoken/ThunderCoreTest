@@ -60,7 +60,7 @@ window.onload = function () {
   //metamaskの準備
   //web3js = new Web3(web3.currentProvider);
   //スマートコントラクト読み込み
-	const portis = new Portis('11e0be8c-54cf-491b-98dd-5d96ddec81e0', 'mainnet');
+	const portis = new Portis('11e0be8c-54cf-491b-98dd-5d96ddec81e0', 'thundercore');
 
 	const web3 = new Web3(portis.provider);
 
