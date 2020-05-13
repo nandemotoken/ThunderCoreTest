@@ -63,6 +63,7 @@ window.onload = function () {
 	const portis = new Portis('11e0be8c-54cf-491b-98dd-5d96ddec81e0', 'thundercore');
 
 	const web3 = new Web3(portis.provider);
+  console.log("reader.js_is_checking_web3.js_version..." + Web3.version);
 
 	mycontract = new web3.eth.Contract(ABI, Address);
 
