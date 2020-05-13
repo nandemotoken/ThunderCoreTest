@@ -58,9 +58,13 @@ ethereum.enable();
 window.onload = function () {
 
   //metamaskの準備
-  web3js = new Web3(web3.currentProvider);
+  //web3js = new Web3(web3.currentProvider);
   //スマートコントラクト読み込み
-  mycontract = new web3js.eth.Contract(ABI, Address);
+	const portis = new Portis('11e0be8c-54cf-491b-98dd-5d96ddec81e0', 'mainnet');
+
+	const web3 = new Web3(portis.provider);
+
+	mycontract = new web3.eth.Contract(ABI, Address);
 
   //1.00-beta.36と表示されるのが正しい
   console.log("reader.js_is_checking_web3.js_version..." + Web3.version);
